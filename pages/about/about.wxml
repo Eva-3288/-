@@ -1,0 +1,6 @@
+<!--pages/about/about.wxml-->
+<text>hello </text>
+<text>hello </text>
+<view>你好</view>
+<view>你好</view>
+<button>完成</button>
