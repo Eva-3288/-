@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/10scroll-view/10scroll-view",
+    "pages/9swiper/9swiper",
+    "pages/8reg/8reg",
+    "pages/icon/icon",
     "pages/about/about",
     "pages/index/index",
     "pages/logs/logs"

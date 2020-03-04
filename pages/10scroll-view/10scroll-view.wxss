@@ -1,0 +1,14 @@
+scroll-view{
+  background:#f0f0f0;
+}
+.nav{
+  display: flex;
+/* flex布局默认row方向 */
+  height:80rpx;
+  line-height: 80rpx;
+  white-space: nowrap; 
+   /* 不换行 */
+}
+.nav navigator{
+  padding:0 39rpx;
+}

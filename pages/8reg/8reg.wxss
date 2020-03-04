@@ -1,0 +1,54 @@
+page{
+  background:#f0f0f0;
+  padding: 80rpx 40rpx;
+  overflow: hidden;
+}
+.box{
+  width:670rpx;
+}
+.title{
+  text-align: center;
+  padding: 100rpx 0;
+  font-size:50rpx;
+  
+}
+/* 
+1px = 2rpx;  
+但是这种转换不是绝对值，iphone6是1：2, rpx类似em / rem
+rpx 是微信的单位，根据不同的手机版本进行切换，微信建议我们用iphone6 作为标准调试界面
+ */
+
+ .row{
+   height:100rpx;
+   width:630rpx;
+   border-bottom: 1px solid #ccc;
+   padding:0 20rpx;
+ }
+ .tel{
+   float:left;
+   width:420rpx;
+   height:100rpx;
+   /* background: red; */
+   line-height:100rpx;
+   font-size: 28rpx;
+ }
+ .row .getCode{
+   width:200rpx!important;
+   font-size:28rpx;
+   /* font-weight: 100; */
+   padding:0;
+   height:80rpx;
+   line-height:80rpx;
+    margin-right:0!important;
+ }
+
+ .submitBtn{
+   padding-top: 80rpx;
+   border: none;
+   
+ }
+ .submitBtn button{
+   width:500rpx!important;
+ 
+   
+ }

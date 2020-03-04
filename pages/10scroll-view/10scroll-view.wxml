@@ -1,0 +1,16 @@
+<view>
+  <scroll-view scroll-x>
+  <!-- 2. 必须给scroll-view 添加属性scroll-x 才能滑动 -->
+    <view class="nav">
+    <!-- 1.给.nav弹性盒布局，且不换行  display: flex;white-space: nowrap;  -->
+      <navigator url=''>国内新闻</navigator>
+      <navigator url=''>国际新闻</navigator>
+      <navigator url=''>社会新闻</navigator>
+      <navigator url=''>娱乐新闻</navigator>
+
+    <navigator url=''>国际新闻</navigator>
+      <navigator url=''>社会新闻</navigator>
+      <navigator url=''>娱乐新闻</navigator>
+    </view>
+  </scroll-view>
+</view>

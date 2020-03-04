@@ -1,0 +1,40 @@
+<!-- 点击微信开发工具右上角"详情" ,查看项目信息：本地代码的大小是不能超过2兆的（2兆就是2mb（兆字节） = 2048 kb（千字节），所以我们的大图片都不存本地，我们可以弄个在线库 或者弄个图片平台-->
+<view>
+<swiper autoplay interval="3000" duration="1000" indicator-dots current="1" bindchange="changeCurrent" style='height:300rpx;' vertical>
+<!-- swiper 拖动的时候拖的是swiper-item 这个项 -->
+<!-- swiper属性：
+autoplay:自行轮播
+interval:自动切换的时间间隔，单位毫秒，1000毫秒 = 1秒，微信默认值是5秒
+duration:滑动动画时长，默认500毫秒（0.5s）--也就是从一张图切换到另一张图，用时0.5s
+注意：interval="3000" duration="3000"  如果写的时候 这样就是：每个3s切换一次，每次切换用3s时间，效果就是，图不会停，一直滑动
+indicator-dots: 轮播图下方小圆点，告知有几个图片，但是不能点击这个点， indicator是标志，指示信号的意思；
+indicator-color: 轮播图指示点的颜色
+current:页面刷新的时候，轮播图都是按照顺序123依次从头开始展示的，如果我们希望刷新打开先显示第2张，就用这个属性current = 1（ 值是数组索引）值 
+vertical:轮播图垂直方法滑动，默认是水平滑动的；如果要设这个值，必须要设置高度才会生效： style='height:300rpx;' vertical
+ -->
+ <!-- swiper事件
+ bindchange：当current改变时触发这个事件（自动播放 或者点击切换都触发）
+  -->
+<swiper-item>  
+  <image src='https://img11.360buyimg.com/babel/s960x370_jfs/t1/83539/14/13790/245810/5db2e06cEab8e5bd0/b76b8c8927f4aa99.jpg!cc_960x370'></image>
+  <!-- 微信里图片变迁不是img  而是image -->
+  <!-- 微信里一般icon图标我们存在本地，图片我们不存本地，用线上的图片；如果一张图片很大，那下载这个图片时占据的内存很大，不存在大数据加载的操作； -->
+</swiper-item>
+<swiper-item> 
+  <!-- 1.点击图片跳转页面，html里我们是用a标签包裹图片，点击图片其实是对a标签的操作，
+  2. 这里类似只是把a标签<a href=''></a>换成了navigator标签<navigator url=''></navigator> ,
+  3.并且链接属性名是url，属性值必须是应用内的跳转链接，在app.json的pages里注册过的页面，不能像网页一样跳百度
+  4.url 路径问题：
+  app.json里pages里的路径："pages/9swiper/9swiper" 是**当前目录下**的pages里的文件，app.json 和pages同级目录下
+  而navigator跳转的时候："/pages/9swiper/9swiper"  前面要加/ 表示从**根路径**出发找pages文件夹
+  -->
+  <image src='https://img12.360buyimg.com/babel/s960x370_jfs/t1/49223/37/16144/136617/5dce7e6fE7dd6138e/d91e1085058aef5f.jpg!cc_960x370'></image>
+</swiper-item>
+<swiper-item>  
+  <image src='https://img13.360buyimg.com/babel/s960x370_jfs/t1/88382/27/10925/192045/5e240fc8E671f49ac/5c93000e0e62434d.jpg!cc_960x370'></image>
+</swiper-item>
+</swiper>
+<!-- swiper 切换的是swiper-item 和内部内容没有关系，swiper-item 内可以放文字、图片 还可以放页面 ，进行页面的切换
+小程序页面的左右滑动切换页面就是这样实现的
+-->
+</view>

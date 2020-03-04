@@ -1,0 +1,13 @@
+<view class="container">
+  <icon type='success' size='28'></icon>
+  <icon type='success_no_circle' color='red'></icon>
+
+  <icon type='warn' size='23'></icon>
+  <icon type='clear'></icon>
+
+  <text>you pang le !</text>
+  <text space='ensp'>you pang le !</text>
+</view>
+<view>
+  <input></input>
+</view>
