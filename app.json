@@ -1,5 +1,16 @@
 {
   "pages": [
+    "pages/19movable-demo/19movable-demo",
+    "pages/19cover-view/19cover-view",
+    "pages/19movable/19movable",
+    "pages/18video/18video","pages/18audio2-createInnerAudioContext/18audio2-createInnerAudioContext",
+    "pages/18audio1-createAudioContext/18audio1-createAudioContext",
+    "pages/17event-demo/17event-demo",
+    "pages/17event/17event",
+    "pages/15template-demo/15template-demo",
+    "pages/13bind/13bind",
+    "pages/12demo-game-index/12demo-game-index",
+    "pages/11flex/11flex",
     "pages/10scroll-view/10scroll-view",
     "pages/9swiper/9swiper",
     "pages/8reg/8reg",

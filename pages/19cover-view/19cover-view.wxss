@@ -1,0 +1,15 @@
+cover-image{
+  width:100rpx;
+  height:100rpx;
+}
+video{
+  width: 100%;
+  position: relative;
+}
+/* div 在父元素中居中 */
+cover-view {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translate3d(-50%,-50%,0);
+}

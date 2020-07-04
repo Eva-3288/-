@@ -1,0 +1,30 @@
+<!-- 这个切换不是切换页面，而是切换的swiper组件，不是跳页面，是一个页面里的 -->
+<view>
+  <scroll-view scroll-x>
+    <view class="navBox">
+      <block wx:for='{{navLists}}' wx:key='unique'>
+        <!-- <navigator url='{{item.url}}'>{{item.txt}}</navigator> -->
+         <view class="{{navClassArr[index]}}" bindtap="changeSwiper" data-index='{{index}}'>{{item.txt}}</view>
+         <!-- 点击的时候触发changeSwiper这个函数，但触发的时候我们要传递一个数据，告诉方法我们点击的是哪个菜单项；
+         可以用 data-变量名=''  的方式传递数据，data是数据，- 代表传输对象，
+         changeSwiper 函数里，通过事件处理参数event来获取变量
+          -->
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<!-- 轮播 -->
+<!-- swiper由个默认的高度：150px; 我们需要把swiper拉长到完整页面长度；不同手机长度不同-->
+
+<!-- 对于样式结构的100%来说，需要有个外层的 高度设定（任何百分数的外层要有个固定值存在，固定值）-->
+
+<!-- 微信给提供了一个系统api，有一个方法wx.getSystemInfo让我们可以当前屏幕的宽度/高度--我们称之为系统参数 -->
+
+<!-- 拿获取到的屏幕高度swiperRpxHeight 去修改swiper的高度，swiper的高度 必须以渲染角度渲染，所以不能写在css里 -->
+<view>
+  <swiper style="height:{{swiperRpxHeight}}rpx;" current="{{currentPage}}">
+    <swiper-item>00 </swiper-item>
+    <swiper-item>11</swiper-item>
+    <swiper-item>22</swiper-item>
+  </swiper>
+</view>

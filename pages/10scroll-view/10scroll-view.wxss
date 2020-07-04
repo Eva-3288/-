@@ -12,3 +12,27 @@ scroll-view{
 .nav navigator{
   padding:0 39rpx;
 }
+
+.news{
+  /* background: red; */
+  padding:40rpx;
+  display: flex;
+}
+.news image{
+  width:260rpx;
+  height:180rpx;
+}
+.newsRight{
+  width:400rpx;
+  padding-left:20rpx;
+}
+
+.newsRight .title{
+  font-family: '微软雅黑';
+  margin-bottom: 20rpx;
+}
+.newsRight text{
+  word-break:break-word; 
+  /* 文字换行 */
+  font-size:26rpx;
+}

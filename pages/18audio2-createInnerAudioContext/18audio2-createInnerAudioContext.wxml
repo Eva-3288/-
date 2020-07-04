@@ -1,0 +1,14 @@
+<!-- 停止状态 -->
+<!-- 如果不是正在播放（!isplay） 点击播放 -->
+<view class="audio-pause" wx:if='{{!isplay}}' bindtap="play">
+  <image class='audio-img' src='/images/2.jpg'></image>
+  <image class='audio-icon' src="/images/play.png"></image>
+</view>
+<!-- 播放状态 -->
+<view class="audio-play" wx:else bindtap="stop">
+<image class='audio-img' src='/images/2.jpg'></image>
+<image class='audio-icon' src="/images/stop.png"></image>
+</view>
+
+<slider></slider>
+<!-- 写一个滑块控制播放进度 -->

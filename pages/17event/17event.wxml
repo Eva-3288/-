@@ -1,0 +1,52 @@
+<text bindtap='func1'>点我</text>
+<!-- 1、事件源是text，我们完成了一个事件的绑定（监听bindtap单击事件） 
+2、一旦对事件源有触发，那么func1自动开始运行，
+3. 运行的时候对事件源的操作，我们可以在func1中得到一个事件的回参event,event是系统给的；
+-->
+<text bindtap='{{eventFunc}}'>点我1</text>
+<view></view>
+<!-- 也可以绑定一个变量，变量值是事件名 -->
+
+<!-- 
+bindtap --  单触摸模式，单击；
+bindlongtap --  长按
+
+bindtouchstart 
+bindtouchmove 
+bindtouchend
+bindtouchcancel
+ touch是手指事件，手指放在手机屏幕上移动过程中的开始、移动、结束 和 取消
+
+**表单上面：**
+--bindinput  对输入框改变时触发，通过event获得改变的值 
+-->
+
+-----事件分类:bind冒泡/catch非冒泡-----
+
+<view id="outer" bindtap="handleTap1">
+  outer view1
+  <view id="middle" catchtap="handleTap2">
+    middle view2
+    <view id="inner" bindtap="handleTap3">
+      inner view3
+    </view>
+  </view>
+</view>
+<!-- 
+点击inner view3 触发：handleTap3 和 handleTap2
+点击middle view2 触发：handleTap2 
+点击outer view1触发：handleTap1 
+ -->
+
+-----事件分类:事件捕获-----
+<view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
+  outer view
+  <view id="inner" bind:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+<!-- 点击里面的inner view 先触发外面的事件捕获handleTap2 ，再触发里面的事件捕获handleTap4 然后是内部的事件处理函数handleTap3 然后冒泡到外面的事件处理函数handleTap1 -->
+<!-- 1. 捕获先执行，事件处理函数后执行：--事件捕获的执行点优于/早于事件处理函数（事件绑定函数），
+2. 捕获是从外到里，事件处理函数是从里到外
+
+这样就增加了在事件处理之前的一个操作； -->

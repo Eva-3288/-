@@ -1,0 +1,26 @@
+.audio-pause,.audio-play{
+  width:400rpx;
+  height:400rpx;
+  position: relative;
+  margin: 60rpx auto;
+}
+
+.audio-pause .audio-img,.audio-play .audio-img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  
+}
+.audio-pause .audio-icon,.audio-play .audio-icon{
+  width:100rpx;
+  height:100rpx;
+  position: absolute;
+  left:150rpx;
+  top:150rpx;
+  border-radius:50%;
+  
+}
+slider{
+  width:70%;
+  margin: 0 auto;
+}

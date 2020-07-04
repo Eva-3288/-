@@ -1,0 +1,9 @@
+<import src='/templates/list-item.wxml' />
+<view>
+  <movable-area class='list-item'>
+    <movable-view direction='horizontal'>
+      <view class="content">111111</view>
+      <view class="del">删除</view>
+    </movable-view>
+  </movable-area>
+</view>

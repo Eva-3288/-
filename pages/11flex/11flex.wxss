@@ -1,0 +1,56 @@
+.outer-view{
+background: #f0f0f0;
+/* height:400rpx; */
+display: flex;
+flex-direction:row;
+justify-content:space-around;
+flex-wrap:wrap;
+align-items:flex-start;
+/* 
+1. display: flex; 布局为弹性布局,加在父元素上;
+2. flex-direction:row/column; 主轴方向; 弹性布局的方向（弹性容器的方向）,默认是row 横向；
+row 的主轴方向是从左start向右end；  column 的主轴方向是从上start到 下end
+3. justify-content：flex-start / flex-end / center /spacebetween / space-around 主轴上的对齐方式，justify 是对齐的意思
+弹性项目 在 主轴main-axis 线上的对齐方式，假如主轴方向是从左到右：flex-direction:row； 那么主轴是左中右，交叉轴是上中下：
+flex-start左对齐 / flex-end右对齐 / center左右居中 /spacebetween左右两端对齐 / space-around 平均平分对齐
+4. flex-wrap:wrap; 换行; 一行放不下的时候自动换行，如果没有加这个属性，会都挤在一行里
+
+-----------交叉轴 cross-axis----------
+5. align-items:flex-start 上对齐/flex-end 下对齐/center上下居中/stretch;交叉轴线上的对齐方式；上中下
+
+ */
+}
+.inner-view{
+background: green;
+height:160rpx;
+line-height:160rpx;
+width:160rpx;
+text-align: center;
+margin-top:30rpx;
+}
+
+/* ------------------------------------- */
+.outer{
+background: #f0f0f0;
+display: flex;
+/* 还是在父元素里布局设为flex */
+}
+.inner{
+background: yellowgreen;
+width:120rpx;
+height:120rpx;
+line-height:120rpx;
+border-right:1px solid green;
+text-align: center;
+flex:1;
+/* 
+1. flex：1; --在子元素中 flex：1; 代表：以平均的宽度 来撑满整个父级元素；中间没有缝隙，无论子元素宽度多少，都会撑满；
+ */
+}
+
+/* 
+布局模型有两种：
+1.display: flex;   代表的是可以让你在某一行内完成几个单独区块的创建，相互之间没有关联（都写在父级元素上）
+
+2.父级做了display: flex; 设置，子元素flex:1;每一个子元素均分宽度占满父级；
+ */

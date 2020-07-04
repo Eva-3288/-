@@ -1,16 +1,88 @@
+<!-- 可拖动导航条----scroll-view -->
 <view>
   <scroll-view scroll-x>
-  <!-- 2. 必须给scroll-view 添加属性scroll-x 才能滑动 -->
+    <!-- 2. 必须给scroll-view 添加属性scroll-x 才能滑动 -->
     <view class="nav">
-    <!-- 1.给.nav弹性盒布局，且不换行  display: flex;white-space: nowrap;  -->
+      <!-- 1.给.nav弹性盒布局，且不换行  display: flex;white-space: nowrap;  -->
       <navigator url=''>国内新闻</navigator>
       <navigator url=''>国际新闻</navigator>
       <navigator url=''>社会新闻</navigator>
       <navigator url=''>娱乐新闻</navigator>
 
-    <navigator url=''>国际新闻</navigator>
+      <navigator url=''>国际新闻</navigator>
       <navigator url=''>社会新闻</navigator>
       <navigator url=''>娱乐新闻</navigator>
+      <!-- 在导航条里面注意：点击切页面 和点击跳页面时两码事：
+      点击切页面时绑定bindtap 点击事件，点击的时候利用swiper 切换里面的每一项
+      点解跳页面时，用navigator标签进行页面跳转 -->
     </view>
   </scroll-view>
 </view>
+
+<!-- 新闻列表：有模块化的定义 -->
+<view class="news">
+  <image src='/images/2.jpg'></image>
+  <view class="newsRight">
+    <view class="title">新人9.9</view>
+    <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+  </view>
+</view>
+
+--------应用swiper--------
+<swiper autoplay>
+  <swiper-item>
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+--------应用scroll-view--------
+
+<scroll-view scroll-x>
+  <view style="display:flex;">
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+    <view class="news">
+      <image src='/images/2.jpg'></image>
+      <view class="newsRight">
+        <view class="title">新人9.9</view>
+        <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

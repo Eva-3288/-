@@ -1,0 +1,11 @@
+<template name="goods-item">
+  <view class="goods-item">
+    <image src='{{img}}'></image>
+    <view class="item-right">
+      <view class="item-title">{{title}}</view>
+      <view class="price">￥{{price}}</view>
+      <view class="saleNum">月销{{saleNum}}件</view>
+      <button size="mini">加入购物车</button>
+    </view>
+  </view>
+</template>

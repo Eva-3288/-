@@ -1,0 +1,21 @@
+<view>全方位移动</view>
+<movable-area class='area'>
+<!-- 首先定义一个区域块（可移动区域） -->
+<movable-view class="view" direction='all'>全方位移动</movable-view>
+<!-- 必须给movable-view 加一个属性：direction='all'  表示可以全方位移动 -->
+</movable-area>
+<!-- 
+movable-area : 可移动区域 , 需要设置可移动区域的宽高，默认是10px;
+movable-view : 可拖动容器 -->
+
+<view>在一个area里有多个view,并且移动方向不一样</view>
+<view>应用：水平从左往右推动做删除操作</view>
+<movable-area  class='area'>
+<movable-view  class='view' direction='vertical'>垂直拖动</movable-view>
+<movable-view  class='view' direction='horizontal'>水平拖动</movable-view>
+</movable-area>
+
+<view>固定位置：设置x,y坐标，同时direction='none'</view>
+<movable-area  class='area'>
+<movable-view class="view" x='50' y='50' direction='none'>固定</movable-view>
+</movable-area>

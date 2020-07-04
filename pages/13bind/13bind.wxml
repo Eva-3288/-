@@ -1,0 +1,70 @@
+<view>
+<view>
+姓名 : {{yourname}}
+</view>
+
+<!-- 基础数据绑定 -->
+<!-- 直接写yourname 系统认为这是一个字符串，放在{{}}系统认为这是一个变量 -->
+<view>
+姓名 : {{'yourname'}}
+<!-- {{}}里也可以放字符串，放'' 里就是字符串 -->
+</view>
+<view class='{{score <60 ? "color-red" : "color-green"}}'>
+分数:{{score}}
+<!-- 属性值也可以放变量，由变量就要有{{}}，且字符串要加''' -->
+</view>
+<view id='item-{{id}}'>
+{{'学号：'+ num1 + num2}}
+<!-- 字符串拼接 -->
+</view>
+-----------------------------
+<view>
+<checkbox checked='{{false}}'></checkbox>
+<!-- 布尔值必须放在{{}}里，不然会被识别成字符串，不会转换成真假值 -->
+</view>
+<view>{{a}}{{b}}+{{c}}</view>
+<!-- 在{{}}里面字符串和变量拼接要用+，在{{}}外面什么都不用，自己拼接 -->
+<view>
+{{'学校：'}}{{obj.school}}
+</view>
+<view>
+爱好：{{favs[0]}}
+</view>
+
+-----------条件渲染--------------
+
+<view wx:if='{{true}}'>
+小刘的分数：
+<!-- wx:if 认为所有的字符串都是真，所以表达式要放在{{}}里 -->
+</view>
+
+<view wx:if='{{score >= 80}}'>
+优秀
+</view>
+<view wx:elif='{{score >= 60}}'>
+及格
+</view>
+<view wx:else>
+不及格
+</view>
+<!-- wx:if  / wx:elif  /wx:else -->
+<block wx:if='{{false}}'>
+11111
+</block>
+<!-- block: 不属于wxml的语法，只是条件渲染的一部分结构 
+他是个内联元素，如果wx:if <block>里的内容才运行和显示，如果为false,则不显示，而且代码里也没有相关内容,解析的时候不做了
+-->
+
+<!-- wx:if  和 hidden 不同： wx:if 是惰性操作，外面不满足条件，里面就不执行 -->
+-------------列表渲染--------------
+<view wx:for='{{favs}}' wx:key="unique" wx:for-index='key' wx:for-item = 'value'>
+<!-- {{index}}:{{item}} -->
+{{key}}:{{value}}
+</view>
+
+<block wx:for='{{[yourname,score,obj.school]}}' wx:key="unique">
+  <view>{{item}}</view>
+</block>
+<!-- 组合可以直接在{{}}里进行组合，构成新的对象或数组 -->
+
+</view>

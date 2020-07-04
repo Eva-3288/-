@@ -1,0 +1,16 @@
+<view>
+<audio name="{{name}}" poster="{{poster}}" author="{{author}}"  src="{{src}}" id="myAudio" controls></audio>
+<!-- name --默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效
+    poster 是专辑封面
+    author 演唱
+    src 歌曲来源，歌曲路径
+    id audio 组件的唯一标识符
+    controls  是否显示默认控件,默认是false  所以必须有这个属性才能显示audio
+    loop 单曲循环
+-->
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="warn" bindtap="audioPause">暂停</button>
+<button type="primary" style="width:600rpx;" bindtap="audio5s">设置当前播放时间为5秒</button>
+<button type="primary" bindtap="audioToBegin">回到开头</button>
+</view>

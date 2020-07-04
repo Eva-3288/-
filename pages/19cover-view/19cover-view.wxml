@@ -1,0 +1,13 @@
+<view>cover-view 是覆盖在组件之上的操作</view>
+
+<video src='https://videocdn.taobao.com/oss/ali-video/d074a273a33d259aa269f2880069b181/video.mp4' id="myVideo">
+
+  <cover-view class="play" wx:if='{{!isplay}}' bindtap="play">
+    <cover-image src='/images/play.png'></cover-image>
+  </cover-view>
+
+  <cover-view class="stop" wx:else bindtap="stop">
+    <cover-image src='/images/stop.png'></cover-image>
+  </cover-view>
+</video>
+<!-- 真正用法：放一个和视频一样大的cover-view,来控制播放暂停 -->

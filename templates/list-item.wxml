@@ -1,0 +1,12 @@
+<template name="list-item">
+<block>
+  <view class="news">
+    <image src='/images/2.jpg'></image>
+    <view class="newsRight">
+      <view class="title">新人9.9</view>
+      <text>爆款任你挑，你好河北，你好中国，你好亚洲，你好世界</text>
+    </view>
+  </view>
+</block>
+
+</template>

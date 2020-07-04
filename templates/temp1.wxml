@@ -1,0 +1,6 @@
+<template name="temp1">
+<view>
+成绩：{{score}}
+</view>
+名次：{{num}}
+</template>

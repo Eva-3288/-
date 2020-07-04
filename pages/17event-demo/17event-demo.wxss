@@ -1,0 +1,31 @@
+scroll-view{
+  background: #f0f0f0;
+
+}
+.navBox{
+  display: flex;
+  white-space: nowrap;
+}
+.navBox view{
+ /* border-right:1px solid red; */
+ padding:10rpx 20rpx;
+ height:80rpx;
+ line-height: 80rpx;
+ color:#333;
+}
+.navActive{
+  color:#f85959!important;
+}
+.navNoActive{
+  color:#333;
+}
+/* -----------轮播----------- */
+swiper-item:nth-child(1){
+  background: red;
+}
+swiper-item:nth-child(2){
+  background: blue;
+}
+swiper-item:nth-child(3){
+  background: green;
+}

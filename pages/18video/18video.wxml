@@ -1,0 +1,17 @@
+<view>
+<video src="{{src1}}" id='myVideo' controls></video>
+<button bindtap='getVideo' type="primary">获取视频</button>
+</view>
+
+----- 弹幕操作 -----
+<view>
+<video src="{{src}}" id="videoMsg" enable-danmu danmu-list="{{msgLists}}" danmu-btn controls></video>
+<!-- enable-danmu  开启弹幕
+danmu-list 弹幕列表数据
+danmu-btn  操作弹幕的按钮-
+controls 在音频radio里必填默认false，在视频video里非必填默认true-->
+
+<!-- bindblur 光标移开的时候触发 -->
+<input bindblur="msgBlur"></input>
+<button bindtap='sendMsg'>发送弹幕</button>
+</view>

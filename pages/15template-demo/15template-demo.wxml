@@ -1,0 +1,101 @@
+<!-- 定义模板:  name="studentInfo"   定义模板的名字 -->
+<template name="studentInfo">
+  <view>
+    姓名：{{name}}
+  </view>
+  <view>
+    年龄：{{age}}
+  </view>
+</template>
+
+<!-- 调用模板 ： is="studentInfo"  使用哪个模板-->
+<template is="studentInfo" data='{{name,age}}'></template>
+<!-- 这是传的单个的数据（变量） -->
+-------------传对象-------------------------
+<template name="studentInfo1">
+  <view>
+    姓名：{{studentInfo1.name}}
+  </view>
+  <view>
+    年龄：{{studentInfo1.age}}
+  </view>
+</template>
+
+
+<template is="studentInfo1" data='{{studentInfo1}}'></template>
+----对象结构传值----
+<template name="studentInfo1">
+  <view>
+    姓名：{{name}}
+  </view>
+  <view>
+    年龄：{{age}}
+  </view>
+</template>
+
+
+<template is="studentInfo1" data='{{...studentInfo1}}'></template>
+-----------传数组--------------------------
+<template name="studentInfo2">
+<block wx:for='{{studentInfoLists}}' wx:key='unique'>
+  <view>
+    姓名11：{{item.name}}
+  </view>
+  <view>
+    年龄11：{{item.age}}
+  </view>
+</block>
+  
+</template>
+
+
+<template is="studentInfo2" data='{{studentInfoLists}}'></template>
+
+----数组结构传值----
+<!-- 定义的时候不变 -->
+<template name="studentInfo1">
+  <view>
+    姓名：{{name}}
+  </view>
+  <view>
+    年龄：{{age}}
+  </view>
+</template>
+
+<!-- 使用的时候遍历数组 -->
+<block wx:for='{{studentInfoLists}}' wx:key='unique'>
+
+<template is="studentInfo1" data='{{...item}}'></template>
+</block>
+
+-----根据值选择不同的模板 -------
+<template name="studentInfo2">
+  <view>
+    name:{{name}}
+  </view>
+  <view>
+    age:{{age}}
+  </view>
+</template>
+
+
+<block wx:for='{{studentInfoLists}}' wx:key='unique'>
+<template is="{{num % 2 === 0 ? 'studentInfo1' : 'studentInfo2'}}" data='{{...item}}'></template>
+<!-- num是偶数，用模板studentInfo2 -->
+</block>
+
+--------- 引用模板文件 -------
+<!-- 新建文件夹templates  把模板 xx.wxml 文件 放到这个文件夹里，然后引入 -->
+
+<import src='/templates/temp1.wxml'/>
+<!-- import 引入，引用没有继承性：a 引用b,b引用c  ，c不能直接在a中显示；不建议写模板嵌套 -->
+<!-- import 有作用域的概念， -->
+
+<template is="temp1" data='{{score,num}}'></template>
+
+<!-- --------------引用 和 导入 ----------- -->
+<!-- 引用是import
+导入是include--不是把数据拿过去，而是把页面的一部分内容搬过来
+也是在文件夹templates 中新建一个footer.wxml -->
+<!-- import 引入的模板放在template标签里，这是include 导入的，而且导入的时候是在哪放就在哪引 -->
+<include src='/templates/footer.wxml'/>
